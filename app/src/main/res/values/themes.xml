@@ -1,4 +1,18 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Main application theme. -->
+    <style name="Theme.SystemDesign101" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+    </style>
 
-    <style name="Theme.SystemDesign101" parent="Theme.MaterialComponents.Light" />
+    <!-- Splash Screen theme. -->
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <!-- Set the splash screen background, default is white. -->
+        <item name="windowSplashScreenBackground">@color/orange_primary</item>
+        <!-- Use the animated vector drawable for the icon. -->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/animated_app_logo</item>
+        <!-- Set the duration of the icon animation. -->
+        <item name="windowSplashScreenAnimationDuration">1000</item>
+        <!-- Set the theme to use after the splash screen is done. -->
+        <item name="postSplashScreenTheme">@style/Theme.SystemDesign101</item>
+    </style>
 </resources>

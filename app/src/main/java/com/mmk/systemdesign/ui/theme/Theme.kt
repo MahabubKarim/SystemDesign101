@@ -9,35 +9,52 @@ import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+    primary = OrangePrimaryDark,
+    onPrimary = Color.Black,
+    primaryContainer = Color(0xFFE65100), // Darker Orange Container
+    onPrimaryContainer = Color.White,
+    secondary = OrangeSecondaryDark,
+    onSecondary = Color.Black,
+    secondaryContainer = Color(0xFFEF6C00),
+    onSecondaryContainer = Color.White,
+    tertiary = OrangeTertiaryDark,
+    onTertiary = Color.Black,
+    background = Color(0xFF1C1B1F),
+    surface = Color(0xFF1C1B1F),
+    onBackground = Color.White,
+    onSurface = Color.White,
+    surfaceVariant = Color(0xFF4E342E), // Brownish Orange for contrast
+    onSurfaceVariant = Color.White
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
-
-    /* Other default colors to override
+    primary = OrangePrimary,
+    onPrimary = Color.White,
+    primaryContainer = Color(0xFFFFE0B2), // Light Orange Container
+    onPrimaryContainer = Color(0xFFE65100), // Dark Orange Text
+    secondary = OrangeSecondary,
+    onSecondary = Color.White,
+    secondaryContainer = Color(0xFFFFF3E0),
+    onSecondaryContainer = Color(0xFFEF6C00),
+    tertiary = OrangeTertiary,
+    onTertiary = Color.White,
     background = Color(0xFFFFFBFE),
     surface = Color(0xFFFFFBFE),
-    onPrimary = Color.White,
-    onSecondary = Color.White,
-    onTertiary = Color.White,
     onBackground = Color(0xFF1C1B1F),
     onSurface = Color(0xFF1C1B1F),
-    */
+    surfaceVariant = Color(0xFFFFF8E1), // Very Light Orange
+    onSurfaceVariant = Color(0xFF5D4037)
 )
 
 @Composable
 fun SystemDesign101Theme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = true,
+    // Set dynamic color to false as user requested a specific orange theme
+    dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {
