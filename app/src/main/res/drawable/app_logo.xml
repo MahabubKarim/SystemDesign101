@@ -1,0 +1,50 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#6200EE"
+        android:pathData="M0,0h108v108h-108z" />
+
+    <!-- Center Box -->
+    <group android:name="center_node" android:pivotX="54" android:pivotY="54">
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M46,46h16v16h-16z" />
+    </group>
+
+    <!-- Left Box -->
+    <group android:name="left_node" android:pivotX="26" android:pivotY="54">
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M18,46h16v16h-16z" />
+    </group>
+
+    <!-- Right Box -->
+    <group android:name="right_node" android:pivotX="82" android:pivotY="54">
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M74,46h16v16h-16z" />
+    </group>
+
+    <!-- Top Box -->
+    <group android:name="top_node" android:pivotX="54" android:pivotY="26">
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M46,18h16v16h-16z" />
+    </group>
+
+    <!-- Bottom Box -->
+    <group android:name="bottom_node" android:pivotX="54" android:pivotY="82">
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M46,74h16v16h-16z" />
+    </group>
+
+    <!-- Connections -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2"
+        android:pathData="M34,54h12 M62,54h12 M54,34v12 M54,62v12" />
+</vector>
